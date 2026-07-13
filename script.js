@@ -142,8 +142,12 @@ const MENU = {
 };
 
 const STAFF = [
-  { name: "Kelly Punzalan", role: "Front of House / Design", handle: "@pvtt_kelly" },
-  { name: "Jaypee Maximo", role: "Kitchen / Menu Development", handle: "@0nly_stan" }
+  { name: "Kelly Punzalan", role: "", handle: "" },
+  { name: "Jaypee Maximo", role: "", handle: "" },
+  { name: "Floriza De Guzman", role: "", handle: "" },
+  { name: "Kimjhundie Aloro", role: "", handle: "" },
+  { name: "Lei Angel Cordova", role: "", handle: "" },
+  { name: "Liane Villegas", role: "", handle: "" },
 ];
 
 // ---------- Rendering ----------
