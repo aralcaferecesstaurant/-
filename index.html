@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aral Cafe Recesstaurant — Menu</title>
+<meta name="description" content="Aral Cafe Recesstaurant — a school-themed café menu. Orani, Bataan." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="paper-grain" aria-hidden="true"></div>
+
+<header id="top" class="site-header">
+  <a href="#top" class="brand" id="brand-link" aria-label="Back to top">
+    <span class="brand-mark" aria-hidden="true">🔔</span>
+    <div class="brand-text">
+      <span class="brand-name">Aral Cafe</span>
+      <span class="brand-sub">RECESSTAURANT</span>
+    </div>
+  </a>
+
+  <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav id="period-tabs" class="period-tabs" aria-label="Menu sections"></nav>
+  <a href="#reserve" class="reserve-link">Reserve a Table</a>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-board">
+      <p class="hero-eyebrow">Today's Schedule &mdash; All Day, Every Day</p>
+      <h1 class="hero-title">Class is in session.<br>Recess never ends.</h1>
+      <p class="hero-tagline">Filipino comfort food, graded A-plus. Every dish on our roster earned its spot on the honor board.</p>
+      <a href="#appetizers" class="hero-cta">See the Menu ↓</a>
+    </div>
+    <button id="recess-bell" class="recess-bell" aria-label="Ring the recess bell">
+      <svg viewBox="0 0 64 64" width="56" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M32 6C20 6 14 16 14 28c0 10-4 14-6 18h48c-2-4-6-8-6-18 0-12-6-22-18-22Z" fill="#E8B94D" stroke="#2B3A2F" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M24 46a8 8 0 0 0 16 0" stroke="#2B3A2F" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="32" cy="6" r="3" fill="#2B3A2F"/>
+      </svg>
+    </button>
+  </section>
+
+  <section class="intro-note">
+    <p><span class="lettermark">Dear diner,</span> welcome to Aral Cafe Recesstaurant — where every recipe is an honor student and every price is written in red pen. Pick a period below to jump to that part of the menu.</p>
+  </section>
+
+  <div id="appetizers"><h2 class="section-title" data-tab="appetizers"><span>Appetizers</span></h2><div id="section-appetizers" class="section-body"></div></div>
+  <div id="mains"><h2 class="section-title" data-tab="mains"><span>Main Course</span></h2><div id="section-mains" class="section-body"></div></div>
+  <div id="alacarte"><h2 class="section-title" data-tab="alacarte"><span>À La Carte</span></h2><div id="section-alacarte" class="section-body"></div></div>
+  <div id="drinks"><h2 class="section-title" data-tab="drinks"><span>Drinks</span></h2><div id="section-drinks" class="section-body"></div></div>
+  <div id="beverages"><h2 class="section-title" data-tab="beverages"><span>Specialty Beverages</span></h2><div id="section-beverages" class="section-body"></div></div>
+  <div id="desserts"><h2 class="section-title" data-tab="desserts"><span>Desserts</span></h2><div id="section-desserts" class="section-body"></div></div>
+
+  <section class="staff-section">
+    <h2 class="section-title standalone"><span>The Faculty</span></h2>
+    <p class="staff-intro">The staff behind the roster.</p>
+    <div id="staff-list" class="staff-grid"></div>
+  </section>
+
+  <section id="reserve" class="reserve-section">
+    <h2 class="section-title standalone"><span>Reserve a Table</span></h2>
+    <p class="reserve-intro">Save your seat for recess. Fill out the slip below.</p>
+
+    <div class="reserve-card">
+      <div id="res-form-view">
+        <form id="reservation-form" class="reservation-form">
+          <label>
+            Name
+            <input type="text" id="res-name" required placeholder="Juan Dela Cruz" />
+          </label>
+          <div class="form-row">
+            <label>
+              Date
+              <input type="date" id="res-date" required />
+            </label>
+            <label>
+              Time
+              <input type="time" id="res-time" required />
+            </label>
+          </div>
+          <label>
+            Number of Guests
+            <select id="res-guests">
+              <option value="1">1</option>
+              <option value="2" selected>2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6+</option>
+            </select>
+          </label>
+          <label>
+            Contact Number
+            <input type="tel" id="res-contact" placeholder="09XX XXX XXXX" />
+          </label>
+          <button type="submit" class="reserve-submit">Book Table</button>
+        </form>
+      </div>
+
+      <div id="res-confirmation" class="res-confirmation" style="display:none;">
+        <p class="confirmation-mark">✓ Reservation Confirmed</p>
+        <p class="confirmation-code" id="res-code"></p>
+        <p class="confirmation-summary" id="res-summary"></p>
+        <p class="confirmation-footnote">A slip like this would normally be texted to you — see you at recess!</p>
+        <button id="res-again-btn" class="reserve-submit ghost">Make Another Reservation</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark" aria-hidden="true">🔔</span>
+      <div class="brand-text">
+        <span class="brand-name">Aral Cafe</span>
+        <span class="brand-sub">RECESSTAURANT</span>
+      </div>
+    </div>
+    <div class="footer-info">
+      <p>📍 Located at Orani, Bataan Plaza</p>
+      <p>📞 0994 332 5019</p>
+      <p>✉️ aralcaferecesstaurant@gmail.com</p>
+      <p>📸 @ARALCAFEORANI</p>
+    </div>
+  </div>
+  <p class="footer-note">Fictional restaurant &middot; School project menu &middot; &copy; <span id="year"></span> Aral Cafe Recesstaurant</p>
+</footer>
+
+<button id="cart-fab" class="cart-fab" aria-label="View order">
+  🛒 <span id="cart-badge" class="cart-badge">0</span>
+</button>
+
+<div id="cart-overlay" class="cart-overlay"></div>
+
+<aside id="cart-drawer" class="cart-drawer" aria-label="Your order">
+  <div class="cart-drawer-header">
+    <h3>Your Order</h3>
+    <button id="cart-close" class="cart-close" aria-label="Close order panel">✕</button>
+  </div>
+
+  <div id="cart-body">
+    <p id="cart-empty" class="cart-empty">No items yet — tap "+ Add" on any dish to build your order.</p>
+    <ul id="cart-items" class="cart-items"></ul>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Total</span>
+        <span id="cart-total">₱0</span>
+      </div>
+      <button id="checkout-btn" class="checkout-btn" disabled>Place Order</button>
+      <p class="cart-disclaimer">This is a class-project simulation — no real order is sent anywhere.</p>
+    </div>
+  </div>
+
+  <div id="cart-confirmation" class="cart-confirmation" style="display:none;">
+    <p class="confirmation-mark">✓ Order Placed</p>
+    <p class="confirmation-code" id="order-code"></p>
+    <p class="confirmation-summary">Total: <span id="order-total"></span></p>
+    <p class="confirmation-summary">Estimated ready in <span id="order-eta"></span></p>
+    <button id="order-again-btn" class="checkout-btn ghost">Order Again</button>
+  </div>
+</aside>
+
+<script src="script.js"></script>
+</body>
+</html>
