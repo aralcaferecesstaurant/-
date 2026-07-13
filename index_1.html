@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aral Cafe Recesstaurant — Menu</title>
+<meta name="description" content="Aral Cafe Recesstaurant — a school-themed café menu. Orani, Bataan." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="paper-grain" aria-hidden="true"></div>
+
+<header id="top" class="site-header">
+  <a href="#top" class="brand" id="brand-link" aria-label="Back to top">
+    <span class="brand-mark" aria-hidden="true">🔔</span>
+    <div class="brand-text">
+      <span class="brand-name">Aral Cafe</span>
+      <span class="brand-sub">RECESSTAURANT</span>
+    </div>
+  </a>
+
+  <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav id="period-tabs" class="period-tabs" aria-label="Menu sections"></nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-board">
+      <p class="hero-eyebrow">Today's Schedule &mdash; All Day, Every Day</p>
+      <h1 class="hero-title">Class is in session.<br>Recess never ends.</h1>
+      <p class="hero-tagline">Filipino comfort food, graded A-plus. Every dish on our roster earned its spot on the honor board.</p>
+      <a href="#appetizers" class="hero-cta">See the Menu ↓</a>
+    </div>
+    <button id="recess-bell" class="recess-bell" aria-label="Ring the recess bell">
+      <svg viewBox="0 0 64 64" width="56" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M32 6C20 6 14 16 14 28c0 10-4 14-6 18h48c-2-4-6-8-6-18 0-12-6-22-18-22Z" fill="#E8B94D" stroke="#2B3A2F" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M24 46a8 8 0 0 0 16 0" stroke="#2B3A2F" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="32" cy="6" r="3" fill="#2B3A2F"/>
+      </svg>
+    </button>
+  </section>
+
+  <section class="intro-note">
+    <p><span class="lettermark">Dear diner,</span> welcome to Aral Cafe Recesstaurant — where every recipe is an honor student and every price is written in red pen. Pick a period below to jump to that part of the menu.</p>
+  </section>
+
+  <div id="appetizers"><h2 class="section-title" data-tab="appetizers"><span>Appetizers</span></h2><div id="section-appetizers" class="section-body"></div></div>
+  <div id="mains"><h2 class="section-title" data-tab="mains"><span>Main Course</span></h2><div id="section-mains" class="section-body"></div></div>
+  <div id="alacarte"><h2 class="section-title" data-tab="alacarte"><span>À La Carte</span></h2><div id="section-alacarte" class="section-body"></div></div>
+  <div id="drinks"><h2 class="section-title" data-tab="drinks"><span>Drinks</span></h2><div id="section-drinks" class="section-body"></div></div>
+  <div id="beverages"><h2 class="section-title" data-tab="beverages"><span>Specialty Beverages</span></h2><div id="section-beverages" class="section-body"></div></div>
+  <div id="desserts"><h2 class="section-title" data-tab="desserts"><span>Desserts</span></h2><div id="section-desserts" class="section-body"></div></div>
+
+  <section class="staff-section">
+    <h2 class="section-title standalone"><span>The Faculty</span></h2>
+    <p class="staff-intro">The staff behind the roster.</p>
+    <div id="staff-list" class="staff-grid"></div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark" aria-hidden="true">🔔</span>
+      <div class="brand-text">
+        <span class="brand-name">Aral Cafe</span>
+        <span class="brand-sub">RECESSTAURANT</span>
+      </div>
+    </div>
+    <div class="footer-info">
+      <p>📍 Located at Orani, Bataan Plaza</p>
+      <p>📞 0994 332 5019</p>
+      <p>✉️ aralcaferecesstaurant@gmail.com</p>
+      <p>📸 @ARALCAFEORANI</p>
+    </div>
+  </div>
+  <p class="footer-note">Fictional restaurant &middot; School project menu &middot; &copy; <span id="year"></span> Aral Cafe Recesstaurant</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
